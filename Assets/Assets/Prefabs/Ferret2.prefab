@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ruta: {fileID: 0}
   vel: 1
+  vida: 3
 --- !u!212 &212317230678010980
 SpriteRenderer:
   m_ObjectHideFlags: 1

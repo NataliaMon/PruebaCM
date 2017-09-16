@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BotonTorre.cs" />
+    <Compile Include="Assets\Script\LogicaBarra.cs" />
     <Compile Include="Assets\Script\LogicaPonerTorre.cs" />
     <Compile Include="Assets\Script\PoolingUnidades.cs" />
     <Compile Include="Assets\Script\Proyectil.cs" />

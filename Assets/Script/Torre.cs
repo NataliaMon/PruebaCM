@@ -5,7 +5,6 @@ using UnityEngine;
 public class Torre : MonoBehaviour {
 
     public Proyectil proyectilprefab;
-    private float distancia_umbral = 3;
     public float cooldown = 1f;
     private float cooldownTimer = 0;
     private bool puededisparar = true;
@@ -17,7 +16,7 @@ public class Torre : MonoBehaviour {
         {
             Debug.DrawLine(transform.position, other.transform.position, Color.green);
 
-            //Crear una nueva instancia (copia) del objeto proyectilprefaby meterla a la escena
+            //Crear una nueva instancia (copia) del objeto proyectilprefab y meterla a la escena
             Proyectil nuevoProyectil = Instantiate(proyectilprefab, this.transform.position, Quaternion.identity); 
 
             //Asignar el gameObject del enemigo al proyectil

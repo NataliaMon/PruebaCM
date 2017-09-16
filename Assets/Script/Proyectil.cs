@@ -21,11 +21,14 @@ public class Proyectil : MonoBehaviour {
             //Cambiar la posicion de este proyectil en dirección al enemigo con una velocidad
             transform.position += (objetivo.transform.position - this.transform.position).normalized * velocidad * Time.deltaTime;
 
-            //Si la distancia entre el objetivo y este proyectil es menor que la distancia de umbral, se destruye el proyectil y el objetivo
+            //Si la distancia entre el objetivo y este proyectil es menor que la distancia de umbral, se destruye el proyectil y le resta vida al objetivo
             if (Vector3.Distance(objetivo.transform.position, transform.position) < distanciaUmbral)
             {
                 Destroy(this.gameObject);
-                Destroy(objetivo);
+
+                //Se resta 1 a la variable vida de la componente Unidad del gameobject enemigo
+                objetivo.GetComponent<Unidad>().vida -= 1;
+                
             }
 
         }
